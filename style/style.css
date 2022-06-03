@@ -21,11 +21,11 @@ body {
 }
 
 .text {
-  font-size: 10rem;
+  font-size: 6rem;
   color: transparent;
   text-transform: uppercase;
   word-spacing: 1rem;
-  letter-spacing: 10px;
+  letter-spacing: 3px;
   -webkit-text-stroke: 1px white;
   background: linear-gradient(-45deg, #05193749, #004d7a63, #00879344, #00bf734b, #a6eb1259);
   -webkit-background-clip: text;
