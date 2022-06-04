@@ -50,3 +50,27 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+.circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+
+	&-inner{
+		border: 1px solid white;
+		background-color: white;
+		height: 7px;
+		width: 7px;
+		border-radius: 50%;
+		transition: all 100ms ease-out;
+	}
+	
+	&-outer{
+		border: 1px solid white;
+		height: 3rem;
+		width: 3rem;
+		border-radius: 50%;
+		transition: all 300ms ease-out;
+	}
+}

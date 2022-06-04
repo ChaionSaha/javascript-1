@@ -19,9 +19,20 @@
 		<title>Javascript</title>
 	</head>
 	<body>
+		<div class="circle circle-outer"></div>
+		<div class="circle circle-inner"></div>
 		<div class="text" data-text="Please go to console">
 			Please go to console
 		</div>
+		<script>
+			const circles = document.querySelectorAll(".circle");
+			window.addEventListener("mousemove", (e) => {
+				circles.forEach((circle) => {
+					circle.style.top=`${e.clientY}px`;
+					circle.style.left=`${e.clientX}px`;
+				});
+			});
+		</script>
 		<script src="task.js"></script>
 	</body>
 </html>
