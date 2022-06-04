@@ -21,18 +21,37 @@
 	<body>
 		<div class="circle circle-outer"></div>
 		<div class="circle circle-inner"></div>
-		<div class="text" data-text="Please go to console">
+		<img src="img/1.png" class="layer" data-speed="5" />
+		<img src="img/2.png" class="layer" data-speed="-2" />
+		<img src="img/4.png" class="layer" data-speed="8" />
+		<img src="img/5.png" class="layer" data-speed="6" />
+		<img src="img/6.png" class="layer" data-speed="2" />
+		<img src="img/9.png" class="layer" data-speed="2" />
+		<img src="img/10.png" class="layer" data-speed="4" />
+		<img src="img/11.png" class="layer" data-speed="-4" />
+		<img src="img/12.png" class="layer" data-speed="5" />
+		<div class="text" data-text="Please go to console" data-speed="3">
 			Please go to console
 		</div>
+
 		<script>
 			const circles = document.querySelectorAll(".circle");
 			window.addEventListener("mousemove", (e) => {
 				circles.forEach((circle) => {
-					circle.style.top=`${e.clientY}px`;
-					circle.style.left=`${e.clientX}px`;
+					circle.style.top = `${e.clientY}px`;
+					circle.style.left = `${e.clientX}px`;
+				});
+
+				document.querySelectorAll(".layer").forEach((layer) => {
+					const speed = layer.getAttribute("data-speed");
+					const x = (window.innerWidth - e.pageX * speed) / 100;
+					const y = (window.innerHeight - e.pageY * speed) / 100;
+
+					layer.style.transform=`translateX(${x}px) translateY(${y}px)`;
 				});
 			});
 		</script>
+
 		<script src="task.js"></script>
 	</body>
 </html>

@@ -26,6 +26,7 @@ body {
 	align-items: center;
 	font-size: 62.5%;
 	font-family: "Bebas Neue", cursive;
+	position: relative;
 }
 
 .text {
@@ -56,6 +57,7 @@ body {
 	top: 0;
 	left: 0;
 	transform: translate(-50%, -50%);
+	z-index: -1;
 
 	&-inner{
 		border: 1px solid white;
@@ -73,4 +75,15 @@ body {
 		border-radius: 50%;
 		transition: all 300ms ease-out;
 	}
+}
+
+img{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	opacity: 0.2;
+	filter: blur(10px);
 }
